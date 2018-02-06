@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
-module CoinCapper
-  VERSION = '1.0.0'
+class CoinCapper
+  VERSION = '1.1.0'
 end
