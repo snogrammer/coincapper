@@ -10,7 +10,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Kurt Smith']
   spec.email         = ['zippydev@protonmail.com']
   spec.summary       = 'Coinmarketcap V1 API wrapper'
-  spec.description   = 'coinmarketcap.com V1 API wrapper including additional historical prices and coin market pairs parsed from Coin Market Cap.'
+  spec.description   = 'coinmarketcap.com V1 API wrapper including additional historical prices, coin market pairs, '\
+                       'and currencies by type (coins/tokens) parsed from Coin Market Cap.'
   spec.homepage      = 'https://github.com/kurt-smith/coincapper'
   spec.license       = 'MIT'
 
@@ -37,7 +38,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'pry',        '~> 0.11'
   spec.add_development_dependency 'rake',       '~> 10.0'
   spec.add_development_dependency 'rspec',      '~> 3.7'
-  spec.add_development_dependency 'rubocop'
-  spec.add_development_dependency 'simplecov'
+  spec.add_development_dependency 'rubocop',    '>= 0.52'
+  spec.add_development_dependency 'simplecov',  '>= 0.14'
   spec.add_development_dependency 'webmock', '~> 3.2'
 end
