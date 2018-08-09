@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-lib = File.expand_path('../lib', __FILE__)
+lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'coincapper/version'
 
@@ -39,6 +39,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rake',       '~> 10.0'
   spec.add_development_dependency 'rspec',      '~> 3.7'
   spec.add_development_dependency 'rubocop',    '>= 0.52'
-  spec.add_development_dependency 'simplecov',  '>= 0.14'
-  spec.add_development_dependency 'webmock', '~> 3.2'
+  spec.add_development_dependency 'simplecov',  '~> 0.14'
+  spec.add_development_dependency 'webmock',    '~> 3.2'
 end

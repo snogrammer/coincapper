@@ -3,7 +3,7 @@
 require 'spec_helper'
 
 describe CoinCapper do
-  it { expect(CoinCapper::VERSION).to eq('1.1.0') }
+  it { expect(CoinCapper::VERSION).to eq('1.2.0') }
 
   describe '#coins' do
     it 'returns all coins on default' do
@@ -194,6 +194,18 @@ describe CoinCapper do
                                      percent_change_24h: -11.73,
                                      percent_change_7d: -45.64)
       end
+    end
+  end
+
+  describe '#search' do
+    it 'returns coins matching search' do
+      stub_request(:get, /ticker/).and_return(body: fixture('coins.json'))
+      response = described_class.search('ether')
+      expect(a_request(:get, /ticker\/\?limit=0/)).to have_been_made.once
+      expect(response).to be_a(Array)
+      expect(response.count).to eq(2)
+      expect(response.first).to be_a(Hash)
+      expect(response.first[:id]).to eq('ethereum')
     end
   end
 end

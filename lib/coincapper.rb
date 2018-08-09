@@ -168,6 +168,15 @@ class CoinCapper
       }
     end
 
+    # Regex search for a coin
+    #
+    # @param coin [String] Coin name, id, or symbol
+    # @return [Array] List of coins that match
+    def search(coin)
+      list = coins(limit: 0)
+      list.select { |x| /#{coin}/i =~ x[:id] || /#{coin}/i =~ x[:name] || /#{coin}/i =~ x[:symbol] }
+    end
+
     private
 
     def parse_date(date, format: nil)
