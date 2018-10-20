@@ -3,7 +3,7 @@
 require 'spec_helper'
 
 describe CoinCapper do
-  it { expect(CoinCapper::VERSION).to eq('1.1.0') }
+  it { expect(CoinCapper::VERSION).to eq('1.2.0') }
 
   describe '#coins' do
     it 'returns all coins on default' do
