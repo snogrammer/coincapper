@@ -117,7 +117,9 @@ class CoinCapper
           open: td[1].text.to_f,
           high: td[2].text.to_f,
           low: td[3].text.to_f,
-          close: td[4].text.to_f
+          close: td[4].text.to_f,
+          volume: td[5].text.to_f,
+          market_cap: td[6].text.to_f
         }
 
         daily[:average] = ((daily[:high] + daily[:low]).to_d / 2).to_f
