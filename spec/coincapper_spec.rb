@@ -131,6 +131,8 @@ describe CoinCapper do
         high: 1.05,
         low: 0.92497,
         close: 0.935619,
+        volume: 24.0,
+        market_cap: 626.0,
         average: 0.987485
       )
     end
